@@ -1,0 +1,87 @@
+/* This is the font css and you can chenge fonts here or add them and change them here */
+
+@font-face {
+    font-family: 'Fontspring-demo';
+    src: url('fonts/Fontspring-DEMO-theseasons-bd.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'The-seasons';
+    src: url('fonts/TheSeasonsBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HankenGrotesk';
+    src: url('fonts/HankenGrotesk-Regular.ttf') format('truetype');
+}
+
+/* Classes you can add to your HTML */
+
+/* 
+For the future incase you add another text on your own create an attribute called
+class and add these names (fontspring or hanken) inside the class.
+
+for example: <p class="fontspring">This is a demo text for example</p>
+
+⚠ This is only if you create your own element on the HTML page ⚠
+*/
+.fontspring-demo {
+    font-family: "Fontspring-demo";
+}
+
+.the-seasons {
+    font-family: "The-seasons";
+}
+
+.hanken {
+    font-family: "HankenGrotesk";
+}
+
+/* all elements that need fonts */
+
+/* The fontspring font works on everything since the * selector selects everything but 
+the classes listed below, which are: .client-text, .location and .second-right-explanation 
+are overriden by the other font (HankenGrotesk) so they apply the second font */
+* {
+    font-family: "Fontspring-demo";
+}
+
+.client-text,
+.location,
+.second-right-explanation {
+    font-family: "HankenGrotesk";
+}
+
+.client-text * {
+    font-family: "HankenGrotesk";
+}
+
+.first-name * {
+    font-family: the-seasons, sans-serif;
+}
+
+/* You said you wanted to play with the font so you can add a font file inside the fonts folder then create a  */
+/* font-face like I did up there and use the "font-family" property to give it a property your gonna use for your HTML */
+/* I tried to make it easier for you but the only thing I can do is add the fonts you have already given me */
+/* for your new fonts you wanna add follow what I just said */
+/* Add the font file inside the fonts folder */
+/* create a @font-face class here */
+/* use the font-family attribute and give it a name, any name you want */
+/* then specify the source of the font file and add the souce, (the relative source to make it universal) */
+/* after that add it inside the element selected by css which you wnat to have that font */
+
+
+/* 
+
+Example: you can just copy out this code and use it with real values
+
+@font-face {
+    font-family: 'Font-name-you-specified';
+    src: url('fonts/newlyAddedFont.otf') format('opentype');
+}
+
+body {
+    font-family: "Font-name-you-specified";
+} 
+
+*/

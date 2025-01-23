@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aos/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <title>Unicorn Dust</title>
+</head>
+
+<body class="expertise-body" onscroll="reinitiateButter()">
+
+    <section class="main-container" id="main-scroller">
+
+        <!-- The navigation bar that gets visible when the menu button is clicked -->
+        <div class="pulltab">
+            <img src="images/x-outline.svg" alt="close" class="close-pulltab" onclick=togglePulltab()>
+            <ul class="navlink-container">
+                <a href="work.html">
+                    <li class="navlink work">Work</li>
+                </a>
+                <a href="about.html">
+                    <li class="navlink expertise">About</li>
+                </a>
+                <a href="contact.html">
+                    <li class="navlink contact">Contact</li>
+                </a>
+            </ul>
+        </div>
+
+        <section class="navbar">
+            <video data-src="videos/bar2.mp4" class="navbar-video" autoplay muted loop>
+                Your browser does not support the video tag use a newer version.
+            </video>
+
+            <div class="navbar-container">
+                <h1 class="logo">
+                    <img src="images/Sparks_Lp3.gif" alt="" class="sparkle-icon left-sparkle">
+                    Unicorn Dust
+                    <img src="images/Sparks_Lp4.gif" alt="" class="sparkle-icon right-sparkle">
+                </h1>
+                <img src="images/bar2.svg" alt="" srcset="" class="menu-btn" onclick="togglePulltab()">
+            </div>
+
+            <div class="shade-definer">
+                <img src="images/gradient.png" alt="" class="shade">
+            </div>
+
+        </section>
+
+        <section class="contain-sections expertisencontact expertise-only-section butter-class asyncBackgroundImage" id="butter">
+
+            <section class="first-section">
+
+                <div class="dummy-div"></div>
+                <h1 class="first-name">About Us</h1>
+                   
+                <p class="location"></p>
+            </div>
+            <div class="second-right">
+                <p class="second-right-explanation">
+                  Unicorn Dust is a Los Angeles-based creative animation studio specializing in Large Format Animation for Experiential Marketing. With over thirty years of experience, we develop customized experiences for international brands and institutions. Utilizing our expertise in commercials, advertising, music videos, television, motion graphics, and animation, we create media integrated into different kinds of spaces, screens of all sizes, resolutions, and specs. Embracing the possibilities of the digital and the impact of the physical, we are the link between these two worlds. Our values are centered around creativity and collaboration, driving us to deliver exceptional service to our clients.
+              </p>
+                <br>
+                    <h1 class="first-name">Design</h1>
+            <div class="second-left">
+              <p class="location"></p>
+</div>
+            <div class="second-right">
+                <p class="second-right-explanation">
+                Unicorn Dust designs experiences that bolster the goals of your project. Blending artistry with emerging techniques, we act with great care, design thoughtfully, and think functionally. In collaboration with you, we ensure our design &amp; development phases are executed with precision, involving our clients in each step of a project for consistent feedback. </p>
+                <br>
+                    <h1 class="first-name">Storytelling</h1>
+            <div class="second-left">
+              <p class="location"></p>
+</div>
+            <div class="second-right">
+                <p class="second-right-explanation">
+                  Unicorn Dust develops highly acclaimed content with a focus on concept, creation, and unique narratives. We carry a profound love of storytelling inspired by the time-honored principles of theater. We believe in the power of strong narrative to communicate effectively in the given space, crafting immersive experiences that unite people, help brands reach their full potential, and carry an emotional message that connects brands or products with audiences.
+              </p>
+                <br>
+                    <h1 class="first-name">End-to-End</h1>
+            <div class="second-left">
+              <p class="location"></p>
+</div>
+            <div class="second-right">
+                <p class="second-right-explanation">
+                  As a consultancy and studio, we guide you from strategy to execution, from the design phase to delivery. Providing end-to-end services, we ensure solutions are ambitious, practical, and cater to your organization’s unique needs and goals. Leveraging the latest technologies, we refine our processes to achieve the best possible results, always seeking perfection and exceeding expectations.
+              </p>
+                <br>
+                <h1 class="first-name">Staff Augmentation</h1>
+        
+                <div class="second-right">
+                    <p class="second-right-explanation">
+                      We collaborate with a close-knit network of independent creatives and technical specialists. Our nimble team comprises creators who produce work driven by substance and style. Together, we create moving experiences and craft inspiring content, partnering with great designers to tailor compelling experiences for every project's demands.<br>
+<br>
+                      Let the healing powers of the Unicorn Dust entrance you.
+
+                  </p>
+                    <br>
+                <hr class="line" id="the-line">  
+            </p>
+            
+
+            </section>
+
+            <!-- If you want to duplicate a whole section please duplicate the second section but not the first section for extra spacing reasons -->
+
+
+        </section>
+        
+        
+    </section>
+
+    <!-- These codes here are imported javascript codes -->
+    <script src="butterjs/butter.js"></script>
+    <script src="aos/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // This code here handles the smooth scrolling effect.
+        // I put this code on the html page intentionally so that you can find it here.
+        // With the scrollbar effect you can edit some small things.
+        // wrapperDamper is a value which defines the slowness of the transition
+        // and the smaller it is the more elastic the animation will be
+        // I thought 0.03 is a good value.
+        // CancelOnTouch just disables this effect on mobile devices.
+
+        butter.init({
+            wrapperId: 'butter',
+            wrapperDamper: 0.035,
+            cancelOnTouch: true,
+        });
+    </script>
+</body>
+
+</html>

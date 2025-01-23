@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aos/dist/aos.css" />
+    <!-- import font from adobe -->
+    <link rel="canonical" href="https://fonts.adobe.com/fonts/the-seasons">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <title>Unicorn Dust</title>
+</head>
+
+<body>
+
+    <section class="main-container" id="main-scroller">
+
+        <!-- The navigation bar that gets visible when the menu button is clicked -->
+        <div class="pulltab">
+            <img src="images/x-outline.svg" alt="close" class="close-pulltab" onclick=togglePulltab()>
+            <ul class="navlink-container">
+                <a href="work.html">
+                    <li class="navlink work">Work</li>
+                </a>
+                <a href="about.html">
+                    <li class="navlink expertise">About</li>
+                </a>
+                <a href="contact.html">
+                    <li class="navlink contact">Contact</li>
+                </a>
+            </ul>
+        </div>
+
+        <section class="navbar">
+            <video data-src="videos/bar2.mp4" class="navbar-video" playsinline autoplay muted loop>
+                Your browser does not support the video tag use a newer version.
+            </video>
+
+            <div class="navbar-container">
+                <h1 class="logo">
+                    <img src="images/Sparks_Lp3.gif" alt="" class="sparkle-icon left-sparkle">
+                    Unicorn Dust
+                    <img src="images/Sparks_Lp4.gif" alt="" class="sparkle-icon right-sparkle">
+                </h1>
+                <img src="images/bar2.svg" alt="" srcset="" class="menu-btn" onclick="togglePulltab()">
+            </div>
+
+            <div class="shade-definer">
+                <img src="images/gradient.png" alt="" class="shade">
+            </div>
+
+        </section>
+
+        <section class="contain-sections butter-class asyncBackgroundImage" id="butter">
+
+            <section class="first-section">
+
+                <div class="dummy-div"></div>
+                <h1 class="first-name">We create Large Format Animation for Experiential Marketing</h1>
+                <div class="first-left">
+                    <p class="client-text"><span>Clients: Various<br>1 min</span><span class="viewable-location">Location: LA, NY</span></p>
+                </div>
+                <!-- Here is the code for the animation. I used a library for the library so use this inputs to maipulate the animation. -->
+                <!-- Here is the link clikc and scroll down to find the instructions(https://github.com/michalsnik/aos) -->
+                <!-- 
+                    data-aos="my-fade-up" - this sets up the animation type
+                    data-aos-offset="200" - this sets up the offset for the location the animation should start
+                    data-aos-delay="50" - delay in seconds for the animation to start
+                    data-aos-duration="1000" - duration of the animation 1000 = 1s
+                    data-aos-easing="ease-in-out" - the type of animation smoothness
+                    data-aos-mirror="true" - i don't know what this exactly does
+                    data-aos-once="false" - Should the animation repeat each time we scroll towards it (false) or load only when seen once (true)
+                    data-aos-anchor-placement="top-center" - the point where the element goes to when animationg
+                -->
+                <!-- There are other elements like this. This is applied on each of the videos so check them separately  -->
+                <div class="first-right" data-aos="my-fade-up" data-aos-duration="500" data-aos-delay="50"
+                    data-aos-easing="ease-in-out" data-aos-once="true">
+                    <!-- Careful here, if you copy this tag down here make sure to change the "id" since two tags(elements) can't have the same ids. -->
+                    <video data-src="videos/Intro_Clips2.mp4" alt="moving gif" playsinline autoplay loop width="100%"
+                        class="the-cool-gif" muted></video>
+                    <div style="padding:56.25% 0 0 0;position:relative;" class="the-cool-gif-hidden"><iframe
+                            src="https://player.vimeo.com/video/948986581?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <div class="second-left">
+                    <p class="location hideable-location">Location: LA, NY</p>
+                </div>
+                <div class="second-right">
+                    <p class="second-right-explanation">
+                        Highlights of selected Animation work, a reflection of the wonderful partnerships that brought
+                        it to life.
+                    </p>
+                </div>
+                <div class="dummy-div"></div>
+                <hr class="line" id="the-line">
+
+            </section>
+
+            <!-- If you want to duplicate a whole section please duplicate the second section but not the first section for extra spacing reasons -->
+
+
+            <!-- Copy from here to... -->
+            <section class="second-section">
+
+                <div class="dummy-div"></div>
+                <h1 class="first-name">Netflix Booth - SSDCC22 </h1>
+                <div class="first-left">
+                    <p class="client-text"><span>Clients:<br>UNIT9, Netflix</span><span class="viewable-location">Location: San Diego, CA</span></p>
+                </div>
+                <div class="first-right" data-aos="my-fade-up" data-aos-offset="-50" data-aos-duration="500"
+                    data-aos-delay="50" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <!-- Careful here, if you copy this tag down here make sure to change the "id" since two tags(elements) can't have the same ids. -->
+                    <video data-src="videos/Netflix.mp4" alt="moving gif" playsinline autoplay loop width="100%" class="the-cool-gif"
+                        muted></video>
+                    <div style="padding:56.25% 0 0 0;position:relative;" class="the-cool-gif-hidden"><iframe
+                            src="https://player.vimeo.com/video/839217816?h=a59960cf83&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <div class="second-left">
+                    <p class="location hideable-location">Location: San Diego, CA</p>
+                </div>
+                <div class="second-right">
+                    <p class="second-right-explanation">
+                        Netflix Machine is an interactive booth designed for the 2022 San Diego Comic-Con. Powered by
+                        upcoming Netflix titles, the machine was composed of LED cubes suspended in air to create an
+                        eye-catching 3D animated digital canvas. When attendees activated the machine, the animations
+                        changed to simulate a digital capsule triggering a Rube Goldberg style effect. We created custom
+                        designs and the wrap-around animations that were the focal point of this gamified experience.
+                    </p>
+                </div>
+                <div class="dummy-div"></div>
+                <hr class="line">
+
+            </section>
+            <!-- ... to here if you want to duplicate a single section -->
+
+
+            <!-- Copy from here to... -->
+            <section class="second-section">
+
+                <div class="dummy-div"></div>
+                <h1 class="first-name">American Gods - House of The Gods - SXSW</h1>
+                <div class="first-left">
+                    <p class="client-text"><span>Clients:<br>UNIT9</span><span class="viewable-location">Location: Austin, TX</span></p>
+                </div>
+                <div class="first-right" data-aos="my-fade-up" data-aos-offset="-50" data-aos-duration="500"
+                    data-aos-delay="50" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <!-- Careful here, if you copy this tag down here make sure to change the "id" since two tags(elements) can't have the same ids. -->
+                    <video data-src="videos/AG.mp4" alt="moving gif" playsinline autoplay loop width="100%" class="the-cool-gif"
+                        muted></video>
+                    <div style="padding:56.25% 0 0 0;position:relative;" class="the-cool-gif-hidden"><iframe
+                            src="https://player.vimeo.com/video/839217955?h=169a319167&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <div class="second-left">
+                    <p class="location hideable-location">Location: Austin, TX</p>
+                </div>
+                <div class="second-right">
+                    <p class="second-right-explanation">
+                        This immersive experience combined creative set design with ambitious technology and animations,
+                        including holograms and wall-to-wall LED screens, all featuring custom designs and motion. One
+                        room featured mind-bending projections that brought the series to life on every wall. Another
+                        custom glitch video art over clips of characters like Mr. World and Mr. Wednesday that left not
+                        only attendees but also the cast in awe.
+                    </p>
+                </div>
+                <div class="dummy-div"></div>
+                <hr class="line">
+
+            </section>
+            <!-- ... to here if you want to duplicate a single section -->
+
+
+            <!-- Copy from here to... -->
+            <section class="second-section">
+
+                <div class="dummy-div"></div>
+                <h1 class="first-name">Amazon Echo Escape - SDCC19</h1>
+                <div class="first-left">
+                    <p class="client-text"><span>Clients:<br>UNIT9</span><span class="viewable-location">Location: San Diego, CA</span></p>
+                </div>
+                <div class="first-right" data-aos="my-fade-up" data-aos-offset="-50" data-aos-duration="500"
+                    data-aos-delay="50" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <!-- Careful here, if you copy this tag down here make sure to change the "id" since two tags(elements) can't have the same ids. -->
+                    <video data-src="videos/JR.mp4" alt="moving gif" playsinline autoplay loop width="100%" class="the-cool-gif"
+                        muted></video>
+                    <div style="padding:56.25% 0 0 0;position:relative;" class="the-cool-gif-hidden"><iframe
+                            src="https://player.vimeo.com/video/839218099?h=2ca2ed5016&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <div class="second-left">
+                    <p class="location hideable-location">Location: San Diego, CA</p>
+                </div>
+                <div class="second-right">
+                    <p class="second-right-explanation">
+                        Through a bespoke hangman-like game designed within the Jack Ryan universe, participants
+                        employed their Alexa device for an immersive and rewarding puzzle-solving journey. It was fun to
+                        design and code the DOS looking retro game that was displayed on a rugged laptop for the
+                        participants to engage with.
+
+                    </p>
+                </div>
+                <div class="dummy-div"></div>
+                <hr class="line">
+
+            </section>
+            <!-- ... to here if you want to duplicate a single section -->
+
+
+            <!-- Copy from here to... -->
+            <section class="second-section">
+
+                <div class="dummy-div"></div>
+                <h1 class="first-name">Spotify BNA - Grammys 2020</h1>
+                <div class="first-left">
+                    <p class="client-text"><span>Clients:<br>UNIT9, Spotify</span> <span class="viewable-location">Location: Los Angeles, CA</span></p>
+                </div>
+                <div class="first-right" data-aos="my-fade-up" data-aos-offset="-50" data-aos-duration="500"
+                    data-aos-delay="50" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <!-- Careful here, if you copy this tag down here make sure to change the "id" since two tags(elements) can't have the same ids. -->
+                    <video data-src="videos/BNA.mp4" alt="moving gif" playsinline autoplay loop width="100%" class="the-cool-gif"
+                        muted></video>
+                    <div style="padding:56.25% 0 0 0;position:relative;" class="the-cool-gif-hidden"><iframe
+                            src="https://player.vimeo.com/video/848550509?h=220ea8643f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <div class="second-left">
+                    <p class="location hideable-location">Location: Los Angeles, CA</p>
+                </div>
+                <div class="second-right">
+                    <p class="second-right-explanation">
+                        Spotify's Best New Artist party surpassed all expectations, securing a magnificent lineup of Lil
+                        Nas X, Billie Eilish, and Lizzo. We designed and animated all screens content for the event, and
+                        social marketing pieces.
+                    </p>
+                </div>
+                <div class="dummy-div"></div>
+                <hr class="line">
+
+            </section>
+            <!-- ... to here if you want to duplicate a single section -->
+
+            <!-- Copy from here to... -->
+            <section class="second-section">
+
+                <div class="dummy-div"></div>
+                <h1 class="first-name">Formula E Concert Visuals</h1>
+                <div class="first-left">
+                    <p class="client-text"><span>Clients:<br>XCite Labs, MDL Beast</span><br><br><span>Resolution: 8k<br>30 seconds<br><span class="viewable-location">Location: Riyadh</span></span></p>
+                </div>
+                <div class="first-right" data-aos="my-fade-up" data-aos-offset="-50" data-aos-duration="500"
+                    data-aos-delay="50" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <!-- Careful here, if you copy this tag down here make sure to change the "id" since two tags(elements) can't have the same ids. -->
+                    <video data-src="videos/fast.mp4" alt="moving gif" playsinline autoplay loop width="100%" class="the-cool-gif"
+                        muted></video>
+                    <div style="padding:56.25% 0 0 0;position:relative;" class="the-cool-gif-hidden"><iframe
+                            src="https://player.vimeo.com/video/932716395?h=43e1f69fcf&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <div class="second-left">
+                    <p class="location hideable-location">Location: Riyadh</p>
+                </div>
+                <div class="second-right">
+                    <p class="second-right-explanation">
+                        We created concert visuals for the Formula E-Prix. In Riyadh, local DJs provided the beats while
+                        dynamic visuals adorned screens during race breaks. We delivered eight unique concepts,
+                        seamlessly blending them with the DJed music for an electrifying experience.
+                    </p>
+                </div>
+                <div class="dummy-div"></div>
+                <hr class="line">
+
+            </section>
+            <!-- ... to here if you want to duplicate a single section -->
+
+
+        </section>
+
+
+    </section>
+
+    <!-- These codes here are imported javascript codes -->
+    <script src="butterjs/butter.js"></script>
+    <script src="aos/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+
+
+    <script>
+        // This code here handles the smooth scrolling effect.
+        // I put this code on the html page intentionally so that you can find it here.
+        // With the scrollbar effect you can edit some small things.
+        // wrapperDamper is a value which defines the slowness of the transition
+        // and the smaller it is the more elastic the animation will be
+        // I thought 0.03 is a good value.
+        // CancelOnTouch just disables this effect on mobile devices.
+
+        butter.init({
+            wrapperId: 'butter',
+            wrapperDamper: 0.035,
+            cancelOnTouch: true,
+        });
+    </script>
+</body>
+
+</html>

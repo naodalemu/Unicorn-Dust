@@ -1,0 +1,690 @@
+/* this * selector determines everything in the code. Which means it selects every element in the HTML page */
+/* It is recomended if you do not touch this */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/* This determines the whole body of the html */
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* The Scrollbar code starts here */
+
+::-webkit-scrollbar {
+    width: 14px;
+    /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    /* Set the color of the thumb */
+    border-radius: 6px;
+    /* Round the corners of the thumb */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Set the background image of the track (I used the main background image to blend it even if it's a little bit) */
+}
+
+/* Optionally, you can style the scrollbar buttons (arrows) */
+::-webkit-scrollbar-button {
+    display: none
+        /* removed the buttons so that it won't be visible now */
+}
+
+/* Better not to touch this either. I have a big container to contain everything */
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The box that gets pulled out when the menu button on the top right is clicked */
+.pulltab {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, rgba(189, 131, 216, 1) 0%, rgba(80, 78, 228, 1) 50%, rgba(121, 82, 234, 1) 100%);
+    color: white;
+    width: 100vw;
+    transition: transform 0.3s ease-in;
+    transform: translateX(0px);
+    z-index: 10;
+}
+
+/* When the menu is clicked this property overrides the top same properties which are listed in here. */
+.pulltab-visible {
+    transform: translateX(-100vw);
+    transition: transform 0.3s ease-out;
+}
+
+/* The X button in the menu for screen sizes larger than 1245px(pixels) is determined by this */
+.close-pulltab {
+    width: 25px;
+    position: absolute;
+    top: 28px;
+    /* Because the position property is absolute we can use top, right, bottom, and left to specify how many pixels the object pushes from the direction we used. */
+    right: 3.6%;
+    /* Here it is in percent because it helps us in certain ways for different screen sizes. */
+    cursor: pointer;
+}
+
+/* Not too much to change here either. */
+.navlink-container {
+    list-style: none;
+    margin-top: 65px;
+    font-size: 40px;
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+
+/* The links in the menu are determined by this. Changes that you apply here affect all three of them (Work, Expertise and Contact) */
+.navlink {
+    border-top: 2px solid white;
+    padding: 20px 50px;
+    font-weight: 500;
+    cursor: pointer;
+    /* This changes the cursor to look like a hand */
+    transition: ease-in-out 0.3s;
+    /* the animation for the hovering effect applies here (The one that changes to white when you hover over it) the first is the animation type and the second it the time it takes from start to finish */
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+/* This is what happens when the mouse hovers over the links */
+.navlink:hover {
+    background: white;
+    color: rgba(80, 78, 228, 1);
+}
+
+/* The navbar duh */
+.navbar {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    transition: none;
+}
+
+.navbar-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Not too much to change here either. */
+.navbar-container {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+    transition: none;
+}
+
+/* The logo - Unicorn Dust */
+.logo {
+    position: relative;
+    margin-top: 10px;
+    transition: none;
+    /* This is how I removed the animation for the logo when resizing the screen */
+    letter-spacing: -2px;
+    transform: skew(-10deg, 0deg);
+    /* This is why it is italic, try to play with the degree */
+}
+
+/* The two sparkle icons, this affects both of them */
+.sparkle-icon {
+    position: absolute;
+    /* again this position is absolute and since this affects both icons we used top and left on the next icons */
+    width: 15px;
+    /* Like font determines the size for the logo this determines the size for the sparkles */
+    transition: none;
+}
+
+/* left sparkle */
+.left-sparkle {
+    top: 5px;
+    /* This makes it come down 5px from top */
+    left: -20px;
+    /* and this makes it go 20px to the left since it is a negatie value */
+}
+
+/* right sparkle */
+.right-sparkle {
+    top: 10px;
+    /* This makes it come down 10px from top */
+    right: -15px;
+    /* and this makes it go 15px to the right since it is a negatie value */
+}
+
+/* The menu button for screen sizes larger than 1245px(pixels) is determined by this */
+.menu-btn {
+    cursor: pointer;
+    display: flex !important;
+    align-items: end;
+    width: 30px;
+    margin-top: 17px;
+}
+
+/* This is the container for the shade under the navbar, you can manipulate to this to change things about the shade */
+.shade-definer {
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    height: 32px;
+    /* increase this to increase its height */
+    opacity: 80%;
+}
+
+/* The code for the image itself. Don't touch this. */
+.shade {
+    width: 100%;
+    height: 100%;
+}
+
+/* Define the keyframes for the scrolling animation */
+@keyframes scrollBackground {
+    from {
+        background-position: 0 100%;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+/* This is the container which contains everything except the navbar and the pulltab(menu) */
+.contain-sections {
+    padding-top: 65px;
+    background-image: url('images/low-res/background2.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: contain;
+    /* The number you see here determines the time it takes to loop in seconds so the hihgher the number the slower the background image goes up */
+    animation: scrollBackground 150s linear infinite;
+    width: 100%;
+    /* 2813px */
+}
+
+/* Define a class for the high-resolution background image */
+.high-res-bg {
+    background-image: url('images/high-res/background2.png'); /* Default image, will be overridden by JavaScript */
+}
+
+/* Define a class for the loaded state */
+.loaded {
+    transition: background-image 0.5s ease-in-out;
+}
+
+
+/* a common class only for contact.html and expertise.html since their background behaves differently */
+.expertisencontact {
+    background-size: 100%;
+}
+
+.contact-only-section {
+    height: 13865px;
+}
+
+.expertise-only-section {
+    height: 13865px;
+}
+
+.contact-body {
+    overflow: hidden;
+    height: 13865px;
+}
+
+.expertise-body {
+    max-height: 900px;
+    height: 13865px;
+}
+
+/* The smooth scrolling you feel had some lagging glitch and it was fixed by this. */
+#butter {
+    transition: none;
+}
+
+/* first section begins here (a section contains 4 elements on the HTML, the first-left, first-right, second-left, and second-right) */
+
+.first-section {
+    width: 93%;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+/* All the small texts are handled by this code incase you want to edit them separately I have put empty code as a comment below this. */
+.client-text,
+.location,
+.second-right-explanation {
+    font-size: 12px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-email {
+    font-family: "HankenGrotesk";
+}
+
+/* Here I have put the separate codes for each small text. Change them after removing the comment characters from them */
+
+/* Client texts are the ones that are on the left side and parallel to the image*/
+/* .client-text {
+
+} */
+
+/* location are the ones that are on the left side but paraller to the peacock text */
+/* .location {
+
+} */
+
+/* this is the long text that start's with Peacock */
+/* .second-right-explanation {
+
+} */
+
+/* for example the text that says client: bla bla */
+.first-right {
+    font-size: 40px;
+    margin-bottom: 45px;
+}
+
+.the-cool-gif {
+    cursor: pointer;
+}
+
+.the-cool-gif-hidden {
+    display: none;
+}
+
+/* the heading text above the video thumbnail */
+.first-name {
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 45px;
+    /* This is the spacing between the letters */
+    letter-spacing: -1px;
+}
+
+/* .first-name span {
+    transform: skew(-10deg, 0deg);
+    display: inline-block;
+} */
+
+/* the big video thumbnail */
+.client-img {
+    width: 100%;
+}
+
+/* the long text below the video */
+.second-right {
+    margin-bottom: 45px;
+}
+
+/* The line animation is under here. It is deremined by the width, opacity and transition property */
+.line {
+    background: #c9a7e9;
+    /* Color of the line */
+    border: none;
+    /* The border is an old styled thing so don't turn it on, it looks bad */
+    width: 0%;
+    /* From left to right width and before it is animated */
+    height: 1.5px;
+    /* This is what determines the thinckness of the lines */
+    border-radius: 5px;
+    /* This is not visible now but if you increase the height you will see that it is curved at the edge */
+    margin-bottom: 30px;
+    /* pushes everything below it with the amount specified */
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* Smooth transition effect */
+}
+
+/* this happens when we scroll into view */
+.line-full {
+    width: 100%;
+    /* Width after animated */
+}
+
+/* Second section begins here (if you want to duplicate a single section please duplicate this section and not the first section) */
+
+.second-section {
+    width: 93%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.viewable-location {
+    display: none;
+}
+
+/*  custom my fade up animation starts here (Which means it's the "from" of the animation and the next class is the "to" of the animation) */
+[data-aos='my-fade-up'] {
+    transform: translateY(30px);
+    /* This is the code that decides how much below it comes from if you increase it, it will come from the more bottom end */
+    opacity: 0%;
+    /* Determintes the fade of the animation */
+    transition-property: transform, opacity;
+    /* you should include the animations you want to take effect inside here */
+    /* If you want to change the animation on the HTML I think it's better if you change the animation types in here and not touch the HTML. */
+}
+
+/*  Animation ends here (This is the "to" of the animation) */
+[data-aos='my-fade-up'].aos-animate {
+    transform: translateY(0px);
+    opacity: 100%;
+}
+
+/* Everything in this @media is for different size of screens */
+
+/* for screens below 1425px */
+@media (max-width: 1425px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .navbar-container {
+        font-size: 45px;
+    }
+
+    .first-name {
+        font-size: 40px;
+    }
+
+    .shade-definer {
+        top: 60px;
+    }
+
+    .navlink-container {
+        margin-top: 60px;
+    }
+
+    .contain-sections {
+        padding-top: 60px;
+    }
+
+    /* The X button in the menu for screen sizes less than 1245px(pixels) is determined by this */
+    .close-pulltab {
+        top: 26px;
+        right: 3.7%;
+    }
+}
+
+/* for screens below 1280px */
+@media (max-width: 1280px) {
+    .first-name {
+        font-size: 35px;
+    }
+}
+
+/* for screens below 1140px */
+@media (max-width: 1140px) {
+    .navbar {
+        height: 50px;
+    }
+
+    .navbar-container {
+        font-size: 35px;
+    }
+
+    .first-name {
+        font-size: 32px;
+    }
+
+    .sparkle-icon {
+        width: 10px;
+    }
+
+    .left-sparkle {
+        top: 0px;
+    }
+
+    .right-sparkle {
+        top: 5px;
+    }
+
+    .shade-definer {
+        top: 50px;
+    }
+
+    .client-text,
+    .location,
+    .second-right-explanation {
+        font-size: 10px;
+    }
+
+    .navlink-container {
+        margin-top: 50px;
+    }
+
+    .contain-sections {
+        padding-top: 50px;
+        /* scroll background speed for screens smaller and equal to 1140px (small laptop) */
+        animation: scrollBackground 500s linear infinite;
+    }
+
+    /* The X button in the menu for screen sizes less than 1140px(pixels) is determined by this */
+    .close-pulltab {
+        width: 20px;
+        top: 24px;
+        right: 3.7%;
+    }
+
+    /* The menu button for screen sizes less than 1245px(pixels) is determined by this */
+    .menu-btn {
+        width: 24px;
+        margin-top: 17px;
+    }
+}
+
+/* for screens below 769px */
+@media (max-width: 769px) {
+    * {
+        transition: none;
+    }
+
+    .navbar-container {
+        font-size: 30px;
+    }
+
+    /* The menu button for screen sizes less than 769px(pixels) is determined by this */
+    .menu-btn {
+        width: 25px;
+        margin-top: 10px;
+    }
+
+    /* The X button in the menu for screen sizes less than 769px(pixels) is determined by this */
+    .close-pulltab {
+        width: 23px;
+        top: 18px;
+        right: 3.6%;
+    }
+
+    .first-name {
+        margin-bottom: 10px;
+        transition: none;
+    }
+
+    .first-section {
+        grid-template-columns: 100%;
+    }
+
+    .second-section {
+        grid-template-columns: 100%;
+        margin-top: 50px;
+    }
+
+    .sparkle-icon {
+        width: 15px;
+    }
+
+    .left-sparkle {
+        left: -20px;
+    }
+
+    .right-sparkle {
+        right: -20px;
+    }
+
+    .client-text {
+        margin-bottom: 32px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-left: 5px;
+    }
+
+    .viewable-location {
+        display: inline;
+    }
+
+    .hideable-location {
+        display: none;
+    }
+}
+
+/* for screens below 426px */
+@media (max-width: 426px) {
+    .navbar-container {
+        font-size: 27px;
+    }
+
+    /* The menu button for screen sizes less than 426px(pixels) is determined by this */
+    .menu-btn {
+        width: 25px;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+
+    .contain-sections {
+        /* scroll background speed for screens smaller and equal to 769px (tablet) */
+        animation: scrollBackground 750s linear infinite;
+    }
+
+    .first-name {
+        font-size: 26px;
+        letter-spacing: -0.5px;
+    }
+
+    .pulltab {
+        transition: transform 0.2s ease-in;
+    }
+
+    /* When the menu is clicked this property overrides the top same properties which are listed in here but it's for mobile. */
+    .pulltab-visible {
+        transition: transform 0.2s ease-out;
+    }
+
+    /* The X button in the menu for screen sizes less than 426px(pixels) is determined by this */
+    .close-pulltab {
+        width: 22px;
+        top: 21px;
+        right: 7.3%;
+    }
+
+    .first-right {
+        margin-bottom: 50px;
+    }
+
+    .second-right {
+        margin-bottom: 50px;
+    }
+
+    .navlink {
+        padding: 20px 30px;
+    }
+
+    .sparkle-icon {
+        width: 8px;
+    }
+
+    .left-sparkle {
+        top: 0px;
+        left: -12px;
+    }
+
+    .right-sparkle {
+        top: 5px;
+        right: -13px;
+    }
+
+    .logo {
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 376px) {
+
+    /* The X button in the menu for screen sizes less than 426px(pixels) is determined by this */
+    .close-pulltab {
+        width: 22px;
+        top: 22px;
+        right: 7.6%;
+    }
+
+    .contain-sections {
+        /* scroll background speed for screens smaller and equal to 426px (phone) */
+        animation: scrollBackground 1200s linear infinite;
+    }
+}
+
+/* for screens below 355px */
+@media (max-width: 355px) {
+    .navbar-container {
+        font-size: 25px;
+    }
+
+    /* The menu button for screen sizes less than 355px(pixels) is determined by this */
+    .menu-btn {
+        width: 20px;
+    }
+
+    /* The X button in the menu for screen sizes less than 355px(pixels) is determined by this */
+    .close-pulltab {
+        width: 20px;
+        top: 22px;
+        right: 8%;
+    }
+
+    .sparkle-icon {
+        width: 8px;
+    }
+
+    .contain-sections {
+        /* scroll background speed for screens smaller and equal to 355px (small phone) */
+        animation: scrollBackground 1700s linear infinite;
+    }
+}
+
+
+/* Line 18 - Scrollbar code */
+/* Line 203 - the long lines code */
+/* Line 254 - the fade-in animation manipulation code */
+/* Line 139 - the sparkle code starts there and the 3 classes deal with them */
