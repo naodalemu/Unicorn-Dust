@@ -278,6 +278,10 @@ a {
     grid-template-columns: 20% 80%;
 }
 
+.sudo-first-section {
+    margin-top: 100px;
+}
+
 /* All the small texts are handled by this code incase you want to edit them separately I have put empty code as a comment below this. */
 .client-text,
 .location,
